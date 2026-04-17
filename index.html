@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyTrack - Dashboard de Operações</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">🛸 SkyTrack Drones</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="cadastro.html">Novo Cadastro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="resumo">
+            <h2>Resumo da Frota</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Identificação</th>
+                            <th>Nº de Série</th>
+                            <th>Setor</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="truncate">Drone-SkyHunter-Ultra-Precision-V2</td>
+                            <td>SN-20240001</td>
+                            <td>Entrega Rápida</td>
+                            <td><span class="status-online">Ativo</span></td>
+                        </tr>
+                        <tr>
+                            <td>Alpha-7</td>
+                            <td>SN-20240088</td>
+                            <td>Inspeção</td>
+                            <td><span class="status-offline">Manutenção</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="alertas">
+            <h2>Cards de Alerta</h2>
+            <div class="grid-alerts">
+                <article class="card">
+                    <h3>⚠️ Manutenção Crítica</h3>
+                    <p>Substituir hélices do Drone Alpha-7 imediatamente.</p>
+                </article>
+                <article class="card">
+                    <h3>🔋 Bateria Baixa</h3>
+                    <p>Drone SkyHunter retornando para doca de carregamento.</p>
+                </article>
+                <article class="card">
+                    <h3>🌐 GPS Signal</h3>
+                    <p>Sinal instável detectado no setor de Inspeção Norte.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <button class="btn-sos" onclick="alert('SOS Acionado!')">SOS</button>
+
+    <footer>
+        <p>&copy; 2024 SkyTrack Logistics</p>
+        <address>
+            Escola SENAI "Engº Octávio Marcondes Ferraz" - Ribeirão Preto/SP
+        </address>
+    </footer>
+</body>
+</html>

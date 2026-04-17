@@ -1,0 +1,153 @@
+/* PARTE 4: O RESET */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url('../img/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* HEADER E NAV (FLEXBOX) */
+header {
+    background: rgba(0, 0, 0, 0.85);
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* LAYOUT PRINCIPAL */
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.9);
+    min-height: 80vh;
+}
+
+/* TABELA */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin: 20px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+/* TRUNCAMENTO (A TRÍADE) */
+.truncate {
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* ALERTAS (GRID COM FLEXBOX) */
+.grid-alerts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.card {
+    flex: 1 1 300px;
+    background: #fdfdfd;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    opacity: 0.85;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    transform: translateY(-3px);
+}
+
+/* STATUS CLASSES */
+.status-online {
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 5px;
+}
+
+/* BOTÃO FIXO SOS */
+.btn-sos {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1000;
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 20px;
+    border-radius: 50%;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(231, 76, 60, 0.5);
+}
+
+/* FORMULÁRIO */
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    gap: 10px;
+}
+
+input, select, .btn-enviar {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.btn-enviar {
+    background: #3498db;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    nav ul {
+        flex-direction: column;
+        margin-top: 15px;
+        gap: 10px;
+    }
+}
